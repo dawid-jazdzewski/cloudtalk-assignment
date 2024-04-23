@@ -1,0 +1,17 @@
+export enum ApiPropertyExample {
+  ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1dWlkIiwidXNlcm5hbWUiOiJub3RoaW5nIGlzIGhlcmUiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMzY0MTE2MCwiZXhwIjoxNzEzNzI3NTYwfQ.2Q3eM2yY6ZgPTYtCGBhjHBGsLhW8QcLWFQ6vy5YkMRY',
+  ACCESS_TOKEN_EXPIRES_IN = 86400,
+  CREATED_AT = '2023-12-31T23:59:59.999Z',
+  PAGINATION_PAGE = 1,
+  PAGINATION_LIMIT = 10,
+  PAGINATION_TOTAL = 123,
+  PAGINATION_HAS_NEXT_PAGE = 'true',
+  SORT_BY = 'createdAt',
+  SORT_ORDER = 'ASC | DESC',
+  SEARCH_VALUE = 'someth',
+  TASK_TITLE = 'Write tests for the application',
+  TASK_DESCRIPTION = 'Write tests for the application using Jest and Supertest',
+  USER_PASSWORD = 'HardP4ssword!',
+  USER_USERNAME = 'john_doe',
+  UUID = 'd290f1ee-6c54-4b01-90e6-d701748f0851',
+}

@@ -1,0 +1,5 @@
+export {
+  PAGINATION_DEFAULT_PAGE,
+  PAGINATION_DEFAULT_LIMIT,
+  PAGINATION_MAX_LIMIT,
+} from './pagination.constant';
