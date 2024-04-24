@@ -1,20 +1,19 @@
-import { Injectable } from '@nestjs/common';
+import { CommandHandler, IInferredCommandHandler } from '@nestjs/cqrs';
 import { JwtService } from '@nestjs/jwt';
 
+import { GenerateAccessTokenPayload, TokensData } from '@/app/auth/types';
 import { ConfigService } from '@/config/config.service';
 
-import { UserEntity } from '../users/entities';
+import { GenerateTokensCommand } from './generate-tokens.command';
 
-import { GenerateAccessTokenPayload, TokenData } from './types/token.type';
-
-@Injectable()
-export class TokensService {
+@CommandHandler(GenerateTokensCommand)
+export class GenerateTokensHandler implements IInferredCommandHandler<GenerateTokensCommand> {
   constructor(
     private readonly jwtService: JwtService,
     private readonly configService: ConfigService,
   ) {}
 
-  generate(user: UserEntity): TokenData {
+  async execute({ user }: GenerateTokensCommand): Promise<TokensData> {
     const accessTokenPayload: GenerateAccessTokenPayload = {
       userId: user.id,
       username: user.username,

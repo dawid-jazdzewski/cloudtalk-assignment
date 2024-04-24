@@ -1,6 +1,6 @@
 import { UserRoles } from '@/app/users/enums';
 
-export interface TokenData {
+export interface TokensData {
   accessToken: string;
   expiresIn: number;
 }
