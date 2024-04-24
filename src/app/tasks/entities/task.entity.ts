@@ -28,7 +28,6 @@ export class TaskEntity extends EntityHelper {
   @ApiProperty({ enum: TaskEntityStatus, enumName: 'TaskEntityStatus' })
   @Column({
     type: 'enum',
-    enum: TaskEntityStatus,
     enumName: 'TaskEntityStatus',
     default: TaskEntityStatus.BACKLOG,
   })

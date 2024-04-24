@@ -1,13 +1,15 @@
-import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+import { ApiProperty, ApiPropertyOptional, OmitType } from '@nestjs/swagger';
 import { IsEnum, IsOptional } from 'class-validator';
 
 import { PaginatedResponse } from '@/common/types';
 
 import { TaskEntity, TaskEntityStatus } from '../entities';
 
-export class FindManyTasksEndpointResponse extends PaginatedResponse<TaskEntity> {
-  @ApiProperty({ type: TaskEntity, isArray: true })
-  data: TaskEntity[];
+class SerializedTaskEntity extends OmitType(TaskEntity, ['description']) {}
+
+export class FindManyTasksEndpointResponse extends PaginatedResponse<SerializedTaskEntity> {
+  @ApiProperty({ type: SerializedTaskEntity, isArray: true })
+  data: SerializedTaskEntity[];
 }
 
 export class FindManyTasksSearchQueryParams {

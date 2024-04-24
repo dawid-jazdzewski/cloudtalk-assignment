@@ -11,6 +11,7 @@ export enum ApiPropertyExample {
   SEARCH_VALUE = 'someth',
   TASK_TITLE = 'Write tests for the application',
   TASK_DESCRIPTION = 'Write tests for the application using Jest and Supertest',
+  UPDATED_AT = '2024-02-12T12:34:33.719Z',
   USER_PASSWORD = 'HardP4ssword!',
   USER_USERNAME = 'john_doe',
   UUID = 'd290f1ee-6c54-4b01-90e6-d701748f0851',
