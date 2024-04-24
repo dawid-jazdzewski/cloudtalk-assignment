@@ -143,7 +143,7 @@ describe('Get tasks (e2e)', () => {
     it('Should fetch tasks from page 2: (GET) /api/v1/tasks', async () => {
       return request(app.getHttpServer())
         .get('/api/v1/tasks')
-        .query({ limit: 1, page: 2 })
+        .query({ limit: 1, pageNumber: 2 })
         .auth(accessToken, { type: 'bearer' })
         .expect(200)
         .expect(({ body }) => {

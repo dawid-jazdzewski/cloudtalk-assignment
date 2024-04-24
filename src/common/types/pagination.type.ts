@@ -7,7 +7,7 @@ export class PaginationQueryParams {
   @ApiPropertyOptional({ example: ApiPropertyExample.PAGINATION_PAGE })
   @IsNumber()
   @IsOptional()
-  page: number;
+  pageNumber: number;
 
   @ApiPropertyOptional({ example: ApiPropertyExample.PAGINATION_LIMIT })
   @IsNumber()
@@ -20,7 +20,7 @@ export class PaginatedResponse<T> {
   total: number;
 
   @ApiProperty({ example: ApiPropertyExample.PAGINATION_PAGE })
-  page: number;
+  pageNumber: number;
 
   @ApiProperty({ example: ApiPropertyExample.PAGINATION_LIMIT })
   limit: number;

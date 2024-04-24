@@ -12,7 +12,9 @@ export class BaseQueryBuilder<T extends ObjectLiteral> {
   }
 
   addPagination(pagination: PaginationQueryParams): this {
-    this.queryBuilder.limit(pagination.limit).offset((pagination.page - 1) * pagination.limit);
+    this.queryBuilder
+      .limit(pagination.limit)
+      .offset((pagination.pageNumber - 1) * pagination.limit);
 
     return this;
   }
