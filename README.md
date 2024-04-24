@@ -75,6 +75,16 @@ npm run migration:revert
 
 To seed the database with a sample user account, ensure that the DATABASE_RUN_SEED environment variable is set to true. A seed user account will be created with the username specified in DATABASE_SEED_USERNAME and the password specified in DATABASE_SEED_PASSWORD.
 
+## Testing
+
+To run end-to-end tests, ensure that your database is up and running, as the tests require a database connection. Then execute the following command:
+
+```
+npm run test:e2e
+```
+
+This command will run the end-to-end tests, ensuring that your API endpoints are functioning correctly.
+
 ## Postman Collection
 
 Explore the API endpoints conveniently in Postman.
