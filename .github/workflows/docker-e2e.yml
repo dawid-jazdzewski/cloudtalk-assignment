@@ -3,7 +3,7 @@ name: E2E Tests
 on:
   push:
     branches:
-      - main # zmień na odpowiednią nazwę głównej gałęzi
+      - main
 
 jobs:
   test:
