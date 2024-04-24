@@ -19,7 +19,7 @@ export class EntityHelper extends BaseEntity {
   @CreateDateColumn()
   createdAt: Date;
 
-  @Exclude({ toPlainOnly: true })
+  @ApiProperty({ example: ApiPropertyExample.CREATED_AT })
   @UpdateDateColumn()
   updatedAt: Date;
 
