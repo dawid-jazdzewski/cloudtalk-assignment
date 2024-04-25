@@ -77,7 +77,7 @@ To seed the database with a sample user account, ensure that the DATABASE_RUN_SE
 
 ## Testing
 
-To run end-to-end tests, ensure that your database is up and running, as the tests require a database connection. Then execute the following command:
+To run end-to-end tests, ensure that your database is up and running, as the tests require a database connection. Set DATABASE_HOST=localhost in .env file then execute the following command:
 
 ```
 npm run test:e2e
