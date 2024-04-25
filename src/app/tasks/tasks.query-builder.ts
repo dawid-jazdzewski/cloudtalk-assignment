@@ -6,7 +6,7 @@ import { TasksRepository } from './repositories';
 
 export class TasksQueryBuilder extends BaseQueryBuilder<TaskEntity> {
   constructor(tasksRepository: TasksRepository) {
-    super(tasksRepository.createQueryBuilder('task'), tasksRepository);
+    super(tasksRepository.createQueryBuilder('task'));
   }
 
   addSearch(search: SearchQueryParams): this {

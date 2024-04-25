@@ -16,9 +16,9 @@ export class BaseRepository<T extends ObjectLiteral> extends Repository<T> {
     return {
       data,
       total: count,
-      page: pagination.page,
+      pageNumber: pagination.pageNumber,
       limit: pagination.limit,
-      hasNextPage: count > pagination.limit * pagination.page,
+      hasNextPage: count > pagination.limit * pagination.pageNumber,
     };
   }
 }
